@@ -1,17 +1,22 @@
 body {
-  background-color: #f7f7f7;
+  background-image: url("imagel/polina-kuzovkova-VfCjGjpYl_4-unsplash.jpg"); /* Add your background image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
   margin: 0;
-  padding: 0px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white;
 }
 span {
   display: inline-flex;
 }
 a {
   text-decoration: none;
+  /* color: white; */
 }
 h1 {
   text-align: center;
@@ -21,14 +26,15 @@ h1 {
   width: auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid grey;
+  border-radius: 20px; /* Rounded corners for a softer look */
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.1); /* Translucent white background */
+  backdrop-filter: blur(0px); /* Frosted glass effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
   gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for depth */
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -47,20 +53,31 @@ form {
 .log p {
   text-align: center;
 }
-form #email {
-  width: 100%;
-  height: 30px;
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 8px;
-}
+form #email,
 form #password {
   width: 100%;
-  height: 30px;
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 8px;
+  height: 40px; /* Increased height for a better appearance */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* More padding for comfort */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: #fff; /* White text color */
+  font-size: 16px; /* Larger font size */
+  transition: border-color 0.3s, background 0.3s; /* Smooth transition */
 }
+
+form #email::placeholder,
+form #password::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+form #email:focus,
+form #password:focus {
+  border-color: rgba(87, 102, 219, 1); /* Change border color on focus */
+  background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on focus */
+  outline: none; /* Remove default outline */
+}
+
 #login-btn {
   width: 108%;
   height: 40px;
